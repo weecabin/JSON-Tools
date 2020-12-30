@@ -4,6 +4,7 @@ const apfilename="./MyAirports.json"
 const jsonString = fs.readFileSync(apfilename)
 var myAirports = JSON.parse(jsonString) 
 
+// sets lat/lon precision to 6 decimal places
 function replacer(name,value)
 {
   if (name=="latitude" || name=="longitude")
